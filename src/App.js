@@ -5,7 +5,7 @@ import requests from './requests';
 function App() {
   return (
     <div className="App">
-      <Row fetchUrl={requests.getTopRated} />
+      <Row title="TOP Animes" fetchUrl={requests.getTopRated} />
     </div>
   );
 }
