@@ -1,9 +1,11 @@
 .row {
   margin-left: 20px;
   width: 95%;
+  color: #00adb5;
 }
 
 .row-container {
+  margin: 10px 0 30px 10px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -11,9 +13,12 @@
 }
 
 .row-imgs {
+  padding: 10px 0;
   display: flex;
+  overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
+  scroll-behavior: smooth;
 }
 
 .row-imgs::-webkit-scrollbar {
@@ -28,7 +33,14 @@
 .row-img {
   object-fit: cover;
   width: 100%;
-  max-height: 250px;
+  max-height: 270px;
+  max-width: 150px;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+
+.row-img:hover {
+  transform: scale(1.05);
 }
 
 .btn {
@@ -36,23 +48,28 @@
   justify-content: center;
   align-items: center;
   min-width: 40px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .btn-right img,
 .btn-left img {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-  width: 30px;
+  -webkit-filter: invert(10%);
+  filter: invert(10%);
+  width: 40px;
 }
 
 .btn-left {
   margin-left: -40px;
   transform: translateX(40px);
+  z-index: 2;
 }
 
 .btn-right {
   transform: translateX(-40px);
+  z-index: 2;
 }
