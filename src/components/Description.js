@@ -16,15 +16,17 @@ function Description({ anime }) {
 
     const youTubeGetID = (url) => {
         var ID = '';
-        url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-        if(url[2] !== undefined) {
-          ID = url[2].split(/[^0-9a-z_\-]/i);
-          ID = ID[0];
+        if (url) {
+            url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+            if(url[2] !== undefined) {
+                ID = url[2].split(/[^0-9a-z_\-]/i);
+                ID = ID[0];
+            }
+            else {
+                ID = url;
+            }
+            return ID;
         }
-        else {
-          ID = url;
-        }
-        return ID;
     }
 
     const handleClick = () => {
@@ -45,14 +47,14 @@ function Description({ anime }) {
                 </div>
                 <div className="second-row">
                     <div>
-                        <div className="score">{anime.score}</div>
+                        <div className="score">{anime.score ? anime.score : 'N/A'}</div>
                     </div>
                     <div>
-                        <div><span>Status: </span>{anime.status}</div>
-                        <div><span>Episodes:</span> {anime.episodes}</div>
+                        <div><span>Status: </span>{anime.status ? anime.status : 'N/A'}</div>
+                        <div><span>Episodes:</span> {anime.episodes ? anime.episodes : 'N/A'}</div>
                         <div><span>Genres: </span>{genres}</div>
                     </div>
-                    <p><span>Story: </span>{anime.synopsis}</p>
+                    <p><span>Story: </span>{anime.synopsis ? anime.synopsis : 'N/A'}</p>
                     <button onClick={() => handleClick()}>Watch Trailer</button>
                     { animeUrl && <Youtube videoId={animeUrl} opts={opts} /> }
                 </div>

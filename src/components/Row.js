@@ -19,6 +19,7 @@ function Row({ fetchUrl, title }) {
         fetchData();
     }, []);
 
+
     const { scrollTo } = useSmoothScroll({
         ref,
         speed: 50,
@@ -41,10 +42,9 @@ function Row({ fetchUrl, title }) {
             return request;
             
         }
-        setIsClicked((prev) => !prev);
-        
-        if (isClicked) {
-            fetchData();
+        let req = fetchData();
+        if (req) {
+            setIsClicked(prev => !prev);
         }
     };
 
