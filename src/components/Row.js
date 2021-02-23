@@ -28,7 +28,6 @@ function Row({ fetchUrl, title }) {
     const handleClick = (anime) => {
         const fetchData = async () => {
             const request = await axios.get(`/anime/${anime.mal_id}`);
-            console.log(request);
             setAnime({
                 title: request.data.title,
                 score: request.data.score,
@@ -40,12 +39,12 @@ function Row({ fetchUrl, title }) {
                 trailer_url: request.data.trailer_url
             });
             return request;
+            
         }
+        setIsClicked((prev) => !prev);
         
         if (isClicked) {
             fetchData();
-        } else {
-            setIsClicked(!isClicked);
         }
     };
 
@@ -71,7 +70,7 @@ function Row({ fetchUrl, title }) {
                     <img src="../right-arrow.svg" alt=""/>
                 </div>
             </div>
-            {isClicked && <Description anime={anime} />}
+            { (isClicked && anime.title) ? <Description anime={anime} /> : <div></div> }
         </div>
     )
 }

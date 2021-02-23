@@ -1,0 +1,48 @@
+.desc {
+  padding: 40px;
+  color: #eeeeee;
+  background-color: #393e46;
+  line-height: 30px;
+}
+
+.desc-container {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.first-row img {
+  object-fit: cover;
+  height: 25vw;
+}
+
+.second-row {
+  margin-left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.second-row button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #00adb5;
+  color: #eeeeee;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+span {
+  color: #00adb5;
+}
+
+.score {
+  background-color: #00adb5;
+  max-width: 100px;
+  padding: 30px 20px;
+  font-size: 2rem;
+  text-align: center;
+}
