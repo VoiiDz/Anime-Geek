@@ -6,7 +6,6 @@
 
 .row-container {
   margin: 10px 0 30px 10px;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -58,18 +57,15 @@
 
 .btn-right img,
 .btn-left img {
-  -webkit-filter: invert(10%);
-  filter: invert(10%);
-  width: 40px;
+  -webkit-filter: invert(70%);
+  filter: invert(70%);
+  width: 30px;
 }
 
 .btn-left {
-  margin-left: -40px;
-  transform: translateX(40px);
   z-index: 2;
 }
 
 .btn-right {
-  transform: translateX(-40px);
   z-index: 2;
 }

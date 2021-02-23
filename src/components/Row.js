@@ -1,5 +1,6 @@
 import axios from '../axios';
 import React, { useEffect, useState, useRef } from 'react';
+import useSmoothScroll from 'react-smooth-scroll-hook';
 import "../Styles/Row.css";
 
 function Row({ fetchUrl, title }) {
@@ -14,28 +15,31 @@ function Row({ fetchUrl, title }) {
         fetchData();
     }, []);
 
-    const handleScroll = (offset) => {
-        ref.current.scrollLeft += offset;
-    }
+    const { scrollTo } = useSmoothScroll({
+        ref,
+        speed: 50,
+        direction: 'x'
+    });
 
     return (
         <div className="row">
             <h2>{title}</h2>
             <div className="row-container">
-                <div className="btn btn-left" onClick={() => handleScroll(-100)}>
+                <div className="btn btn-left" onClick={() => scrollTo(-1000)}>
                     <img src="../left-arrow.svg" alt=""/>
                 </div>
                 <div className="row-imgs" ref={ref}>
-                    {animes.map(anime => 
+                    {animes.map((anime, i) => 
                         <img 
                             className="row-img"
                             key={anime.mal_id}
+                            id={`item-${i}`}
                             src={anime.image_url} 
                             alt={anime.title} 
                         />
                     )}
                 </div>
-                <div className="btn btn-right" onClick={() => handleScroll(100)}>
+                <div className="btn btn-right" onClick={() => scrollTo(1000)}>
                     <img src="../right-arrow.svg" alt=""/>
                 </div>
             </div>
