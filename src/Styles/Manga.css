@@ -1,0 +1,41 @@
+.mn-container {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.mn-scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 500px;
+}
+
+.mn-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mn-scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mn-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 500px;
+  text-align: center;
+  color: #00adb5;
+  border: solid 5px #393e46;
+}
+
+.mn-img {
+  object-fit: cover;
+  height: 250px;
+  cursor: pointer;
+}
+
+.mn-desc {
+  margin: 0 auto;
+}
