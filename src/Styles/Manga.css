@@ -48,6 +48,24 @@
   margin: auto;
 }
 
-h5 {
+.mn-desc h5 {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 798px) {
+  .mn-container {
+    display: block;
+  }
+
+  .mn-div {
+    display: block;
+    min-width: 100%;
+    border-left: none;
+    border-right: none;
+    padding-top: 10px;
+  }
+
+  .mn-desc {
+    margin-top: 20px;
+  }
 }
