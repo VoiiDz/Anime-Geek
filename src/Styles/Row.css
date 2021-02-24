@@ -1,5 +1,6 @@
 .row {
   margin-left: 20px;
+  margin-top: 20px;
   width: 95%;
   color: #00adb5;
 }
@@ -9,15 +10,18 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+  border: solid 5px #393e46;
+  border-radius: 5%;
 }
 
 .row-imgs {
-  padding: 10px 0;
+  padding: 10px 10px;
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
+  cursor: pointer;
 }
 
 .row-imgs::-webkit-scrollbar {
@@ -47,7 +51,7 @@
   justify-content: center;
   align-items: center;
   min-width: 40px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0);
   cursor: pointer;
   border: none;
   -webkit-user-select: none; /* Safari */
@@ -68,4 +72,15 @@
 
 .btn-right {
   z-index: 2;
+}
+
+@media screen and (max-width: 798px) {
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    display: none;
+  }
 }

@@ -3,12 +3,20 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.mn-container h2 {
+  color: #00adb5;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .mn-scroll-container {
   display: flex;
   overflow-x: scroll;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .mn-scroll-container::-webkit-scrollbar {
@@ -24,7 +32,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-width: 500px;
+  min-width: 700px;
   text-align: center;
   color: #00adb5;
   border: solid 5px #393e46;
@@ -32,10 +40,14 @@
 
 .mn-img {
   object-fit: cover;
-  height: 250px;
+  height: 40vh;
   cursor: pointer;
 }
 
 .mn-desc {
-  margin: 0 auto;
+  margin: auto;
+}
+
+h5 {
+  margin-top: 20px;
 }

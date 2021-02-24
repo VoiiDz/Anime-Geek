@@ -1,0 +1,28 @@
+.mgDesc-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 5px #393e46;
+  animation: pulse 2s normal;
+  color: #eeeeee;
+  line-height: 30px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mg-score {
+  float: right;
+  background-color: #00adb5;
+  max-width: 100px;
+  width: 100px;
+  padding: 30px 20px;
+  font-size: 2rem;
+  text-align: center;
+}

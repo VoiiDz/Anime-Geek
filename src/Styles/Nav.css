@@ -1,13 +1,18 @@
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
   color: #eeeeee;
 }
 
+nav h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .nav-links {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,4 +34,13 @@ li:visited {
 
 li:hover {
   color: #eeeeee;
+}
+
+@media screen and (max-width: 798px) {
+  .nav-links {
+    display: block;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
 }

@@ -2,7 +2,18 @@
   padding: 40px;
   color: #eeeeee;
   background-color: #393e46;
+  position: relative;
   line-height: 30px;
+  animation: pulse 2s;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .desc-container {
@@ -46,4 +57,19 @@ span {
   padding: 30px 20px;
   font-size: 2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 798px) {
+  .desc-container {
+    display: block;
+  }
+
+  .first-row img {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .second-row {
+    margin-left: 0;
+  }
 }

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../Styles/MangaDesc.css';
 
 function MangaDesc({ mangaDesc }) {
     return (

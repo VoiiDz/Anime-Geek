@@ -50,7 +50,7 @@ function Row({ fetchUrl, title }) {
 
     return (
         <div className="row">
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <div className="row-container">
                 <div className="btn btn-left" onClick={() => scrollTo(-1000)}>
                     <img src="../left-arrow.svg" alt=""/>

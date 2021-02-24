@@ -55,7 +55,8 @@ function Manga() {
     return (
         <div>
             <div className="mn-container">
-                <div className="btn btn-left" onClick={() => scrollTo(-500)}>
+                <h2>Top Ranked Manga</h2>
+                <div className="btn btn-left" onClick={() => {scrollTo(-700); unClick();}}>
                     <img src="../left-arrow.svg" alt=""/>
                 </div>
                 <div className="mn-scroll-container" ref={ref}>
@@ -69,17 +70,17 @@ function Manga() {
                         />
                         <div className="mn-desc">
                             <h3>{manga.title}</h3>
+                            <h5>Rank {manga.rank}#</h5>
                         </div>
                     </div>
                 )}
                 </div>
-                <div className="btn btn-right" onClick={() => {scrollTo(500); unClick();}}>
+                <div className="btn btn-right" onClick={() => {scrollTo(700); unClick();}}>
                     <img src="../right-arrow.svg" alt=""/>
                 </div>
             </div>
             { (isClicked && mangaDesc.score) ? <MangaDesc mangaDesc={mangaDesc} /> : <div></div> }
         </div>
-        
     )
 }
 

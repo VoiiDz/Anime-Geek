@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 function Nav() {
     return (
         <nav>
-            <h1>Anime Geek</h1>
+            <h1>Anime <span>Geek</span></h1>
             <ul className="nav-links">
                 <Link to='/animes' style={{ textDecoration: 'none' }}>
                     <li>Animes</li>
