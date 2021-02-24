@@ -6,7 +6,8 @@ const requests = {
     getHorrorAn: "/genre/anime/14/1",
     getComedyAn: "/genre/anime/4/1",
     getAdvAn: "/genre/anime/2/1",
-    getRomance: "/genre/anime/22/1"
+    getRomance: "/genre/anime/22/1",
+    getTopManga: "/top/manga/1/manga",
 }
 
 export default requests

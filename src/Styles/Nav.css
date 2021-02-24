@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  color: #eeeeee;
+}
+
+.nav-links {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  color: #eeeeee;
+}
+
+Link {
+  text-decoration: none;
+}
+
+li {
+  color: #eeeeee;
+}
+
+li:visited {
+  color: #eeeeee;
+}
+
+li:hover {
+  color: #eeeeee;
+}
