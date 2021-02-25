@@ -22,7 +22,7 @@ function Manga() {
 
     const { scrollTo } = useSmoothScroll({
         ref,
-        speed: 50,
+        speed: 100,
         direction: 'x'
     });
 

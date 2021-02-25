@@ -22,7 +22,7 @@ function Row({ fetchUrl, title }) {
 
     const { scrollTo } = useSmoothScroll({
         ref,
-        speed: 50,
+        speed: 100,
         direction: 'x'
     });
 
@@ -40,7 +40,6 @@ function Row({ fetchUrl, title }) {
                 trailer_url: request.data.trailer_url
             });
             return request;
-            
         }
         let req = fetchData();
         if (req) {
@@ -52,7 +51,7 @@ function Row({ fetchUrl, title }) {
         <div className="row">
             <h3>{title}</h3>
             <div className="row-container">
-                <div className="btn btn-left" onClick={() => scrollTo(-1000)}>
+                <div className="btn btn-left" onClick={() => scrollTo(-700)}>
                     <img src="../left-arrow.svg" alt=""/>
                 </div>
                 <div className="row-imgs" ref={ref}>
@@ -66,7 +65,7 @@ function Row({ fetchUrl, title }) {
                         />
                     )}
                 </div>
-                <div className="btn btn-right" onClick={() => scrollTo(1000)}>
+                <div className="btn btn-right" onClick={() => scrollTo(700)}>
                     <img src="../right-arrow.svg" alt=""/>
                 </div>
             </div>

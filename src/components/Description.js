@@ -7,7 +7,7 @@ function Description({ anime }) {
     const genres = anime.genres.map(ele => ele.name).join(' - ');
     
     const opts = {
-        height: "500",
+        height: "300px",
         width: "100%",
         playerVars: {
             autoplay: 1
