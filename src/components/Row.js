@@ -22,7 +22,7 @@ function Row({ fetchUrl, title }) {
 
     const { scrollTo } = useSmoothScroll({
         ref,
-        speed: 100,
+        speed: 50,
         direction: 'x'
     });
 

@@ -6,12 +6,12 @@
 }
 
 .row-container {
-  margin: 10px 0 30px 10px;
+  margin: 10px 0 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   border: solid 5px #393e46;
-  border-radius: 5%;
+  border-radius: 3%;
   height: 270px;
   width: 100%;
 }
@@ -40,6 +40,7 @@
   max-width: 150px;
   margin-right: 20px;
   transition: all 0.3s ease;
+  border-radius: 7%;
 }
 
 .row-img:hover {

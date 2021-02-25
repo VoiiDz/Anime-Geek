@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 10px;
   border: solid 5px #393e46;
+  border-top: none;
   animation: pulse 2s normal;
   color: #eeeeee;
   line-height: 30px;
