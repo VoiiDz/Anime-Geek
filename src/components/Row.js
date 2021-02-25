@@ -47,31 +47,35 @@ function Row({ fetchUrl, title }) {
         }
     };
 
-    return (
-        <div className="row">
-            <h3>{title}</h3>
-            <div className="row-container">
-                <div className="btn btn-left" onClick={() => scrollTo(-700)}>
-                    <img src="../left-arrow.svg" alt=""/>
+    if (animes.length > 0) {
+        return (
+            <div className="row">
+                <h3>{title}</h3>
+                <div className="row-container">
+                    <div className="btn btn-left" onClick={() => scrollTo(-700)}>
+                        <img src="../left-arrow.svg" alt=""/>
+                    </div>
+                    <div className="row-imgs" ref={ref}>
+                        {animes.map((anime, i) => 
+                            <img 
+                                onClick={() => handleClick(anime)}
+                                className="row-img"
+                                key={anime.mal_id}
+                                src={anime.image_url} 
+                                alt={anime.title} 
+                            />
+                        )}
+                    </div>
+                    <div className="btn btn-right" onClick={() => scrollTo(700)}>
+                        <img src="../right-arrow.svg" alt=""/>
+                    </div>
                 </div>
-                <div className="row-imgs" ref={ref}>
-                    {animes.map((anime, i) => 
-                        <img 
-                            onClick={() => handleClick(anime)}
-                            className="row-img"
-                            key={anime.mal_id}
-                            src={anime.image_url} 
-                            alt={anime.title} 
-                        />
-                    )}
-                </div>
-                <div className="btn btn-right" onClick={() => scrollTo(700)}>
-                    <img src="../right-arrow.svg" alt=""/>
-                </div>
+                { (isClicked && anime.title) ? <Description anime={anime} /> : <div></div> }
             </div>
-            { (isClicked && anime.title) ? <Description anime={anime} /> : <div></div> }
-        </div>
-    )
+        )
+    } else {
+        return <div></div>
+    }
 }
 
 export default Row
